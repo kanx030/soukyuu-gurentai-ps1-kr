@@ -112,9 +112,7 @@
 
 **패치 대상: 트랙 32개를 한 파일로 합친 bin**
 
-Redump 덤프는 트랙별 파일이므로, 패치 전에 한 파일로 합쳐야 합니다.
-- [binmerge](https://github.com/putnam/binmerge): `binmerge "Soukyuu Gurentai - Oubu Shutsugeki (Japan).cue" ps1_j`
-- 또는 chd로 바꾼 뒤 풀기: `chdman createcd -i 원본.cue -o 원본.chd` → `chdman extractcd -i 원본.chd -o ps1_j.cue -ob ps1_j.bin`
+패치는 트랙 32개를 **한 파일로 합친 bin** 에 적용합니다. 이 파일의 확인값:
 
 | 항목 | 값 |
 |---|---|
@@ -124,7 +122,7 @@ Redump 덤프는 트랙별 파일이므로, 패치 전에 한 파일로 합쳐�
 | SHA-1 | `21C32C1BA110AA7393A3BB28D93D3F5C604E6D80` |
 | SHA-256 | `F28439682666CBC01EA0CEE87640BDFA4DAC09C51626BD8F6D7AD6F1ADB60714` |
 ## 패치하는 법
-1. 위 방법으로 Redump 덤프를 **한 개의 bin**(`ps1_j.bin`)으로 합치고, MD5 가 위 값과 같은지 확인합니다.
+1. 원본이 위 '한 파일로 합친 bin' 확인값과 같은지 확인합니다(예: `ps1_j.bin`).
 2. [xdelta UI](https://www.romhacking.net/utilities/598/) 또는 xdelta3로 패치를 적용합니다.
    - `xdelta3 -d -s ps1_j.bin sgkr_v1.0.xdelta sgkr.bin`
    - 패치 결과 `sgkr.bin` 확인값:
