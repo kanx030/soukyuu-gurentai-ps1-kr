@@ -71,8 +71,15 @@
 
 ## 패치하는 법
 1. 원본 bin 의 CRC32·SHA-256 이 위 값과 같은지 확인합니다.
-2. [xdelta UI](https://www.romhacking.net/utilities/598/) 또는 xdelta3로 패치를 적용합니다.
-   - `xdelta3 -d -s ps1_j.bin sgkr_v1.0.xdelta sgkr.bin`
+2. xdelta 로 패치를 적용합니다.
+   - **받는 곳**
+     - xdelta UI (윈도우, 창으로 쓰는 프로그램): https://www.romhacking.net/utilities/598/
+     - xdelta3 (명령줄, 공식 배포): https://github.com/jmacd/xdelta/releases (윈도우는 `xdelta3-…-windows-x86_64.zip`)
+   - **xdelta UI 로 적용**
+     1. xdelta UI 를 실행하고 'Apply Patch' 탭을 엽니다.
+     2. Patch 에 `sgkr_v1.0.xdelta`, Source File 에 원본 bin, Output File 에 `sgkr.bin` 을 지정합니다.
+     3. 'Patch' 를 누르면 `sgkr.bin` 이 만들어집니다.
+   - **xdelta3 로 적용**: `xdelta3 -d -s 원본.bin sgkr_v1.0.xdelta sgkr.bin`
 3. 아래 cue 내용을 메모장에 붙여 넣어 `sgkr.cue`로 저장하고, `sgkr.bin`과 같은 폴더에 둔 뒤 cue 파일로 실행합니다(한국어 음성 트랙이 추가되어 원본 cue는 쓸 수 없습니다).
 
 <details><summary>sgkr.cue 내용 (눌러서 펼치기)</summary>
