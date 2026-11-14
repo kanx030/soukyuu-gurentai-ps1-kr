@@ -2,3 +2,7 @@
 !.gitignore
 !README.md
 !sgkr.cue
+!images/
+!images/*.png
+!samples/
+!samples/*.m4a
