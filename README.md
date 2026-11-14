@@ -61,16 +61,29 @@
 - 플레이어 기체: 도룡·자전·붕아·황무. 조준망: 핀포인트·에이도우·올레인지·보오류·무소우·랜덤·호우센·오우카.
 - 원작의 영어 표시(PLAYER-1, HI-SCORE, CREDITS 등)와 스태프 이름은 원작 그대로 두었습니다.
 ## 원본 롬 정보
-- 파일 이름 (Redump): `Soukyuu Gurentai - Oubu Shutsugeki (Japan)` (SLPS-01172)
-- 패치 대상: 트랙 32개를 한 파일로 합친 bin
+아래 두 판 중 하나가 있으면 됩니다. 어느 판으로 패치해도 같은 한글판이 나옵니다.
 
-| 항목 | 값 |
-|---|---|
-| CRC32 | `7366DF27` |
-| SHA-256 | `F28439682666CBC01EA0CEE87640BDFA4DAC09C51626BD8F6D7AD6F1ADB60714` |
+| 판 | 파일 이름 (Redump) | 패치 대상 | CRC32 | SHA-256 |
+|---|---|---|---|---|
+| 원판 (1997) | `Soukyuu Gurentai - Oubu Shutsugeki (Japan)` (SLPS-01172) | 트랙 32개를 합친 bin | `7366DF27` | `F28439682666CBC01EA0CEE87640BDFA4DAC09C51626BD8F6D7AD6F1ADB60714` |
+| 재발매판 (2003) | `Arcade Hits - Soukyuu Gurentai (Japan)` (SLPM-87255) | 트랙 32개를 합친 bin | `2173868F` | `DEAD8DFECFC57268948C903943B603EC6C211B965CF1C75C45CD566BD899423E` |
+
+한글 패처를 쓰면 트랙별로 나뉜 롬도 그대로 쓸 수 있습니다(패처가 알아서 합침).
 
 ## 패치하는 법
-1. 원본 bin 의 CRC32·SHA-256 이 위 값과 같은지 확인합니다.
+
+### 방법 1: 한글 패처 (권장)
+<p align="center"><img src="images/patcher.png" width="420" alt="한글 패처"></p>
+
+1. 릴리스에서 `SoukyuuGurentai_KR_Patcher_v1.0.zip` 을 내려받아 압축을 풉니다.
+2. `창궁홍련대_한글패처.exe` 를 실행하고, **롬 파일이 있는 폴더**를 고릅니다. 원판·재발매판, 트랙별·합친 파일을 알아서 찾습니다.
+3. 저장 방식을 고릅니다.
+   - **BIN/CUE**: 압축 없는 이미지(약 632MB). 음악·음성 트랙 때문에 .iso 한 파일로는 저장할 수 없습니다.
+   - **CHD**: 압축 이미지 한 파일(약 344MB). 대부분의 에뮬레이터에서 바로 실행됩니다.
+4. '패치 시작'을 누르면 원본 확인 → 패치 → 결과 확인까지 자동으로 진행됩니다.
+
+### 방법 2: xdelta 로 직접
+1. 트랙 32개를 한 파일로 합친 원본 bin 의 CRC32·SHA-256 이 위 값과 같은지 확인합니다. 원판은 `sgkr_v1.0.xdelta`, 재발매판은 `sgkr_v1.0_ArcadeHits.xdelta` 를 씁니다.
 2. xdelta 로 패치를 적용합니다.
    - **받는 곳**
      - xdelta UI (윈도우, 창으로 쓰는 프로그램): https://www.romhacking.net/utilities/598/
@@ -288,4 +301,5 @@ SwanStation(RetroArch)에서 확인했습니다. DuckStation 등 다른 에뮬�
 - 원작 © 1996 RAIZING / 8ing, Data East. 이 패치에는 게임 자료가 들어 있지 않으며, 원본 디스크는 직접 준비해야 합니다.
 - 글꼴: Galmuri © Lee Minseo (quiple), Noto Sans KR / Noto Serif KR © Google, 송명·나눔손글씨 붓 — 모두 SIL Open Font License 1.1.
 - 한국어 음성: ElevenLabs 목소리 설계로 만든 합성 음성.
+- 한글 패처에 들어 있는 xdelta 3.1.0(GPL-2.0)과 chdman 0.215(MAME, GPL-2.0 이상)의 라이선스는 압축 파일의 `라이선스.txt`·`GPL-2.0.txt` 를 보세요.
 - 이 패치는 비영리 팬 번역입니다.
