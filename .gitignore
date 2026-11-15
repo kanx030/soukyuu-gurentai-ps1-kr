@@ -5,3 +5,6 @@
 !images/*.png
 !samples/
 !samples/*.m4a
+!patcher/
+!patcher/*.py
+!patcher/*.txt

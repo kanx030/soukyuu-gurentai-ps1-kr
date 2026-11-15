@@ -302,5 +302,5 @@ SwanStation(RetroArch)에서 확인했습니다. DuckStation 등 다른 에뮬�
 - 원작 © 1996 RAIZING / 8ing, Data East. 이 패치에는 게임 자료가 들어 있지 않으며, 원본 디스크는 직접 준비해야 합니다.
 - 글꼴: Galmuri © Lee Minseo (quiple), Noto Sans KR / Noto Serif KR © Google, 송명·나눔손글씨 붓 — 모두 SIL Open Font License 1.1.
 - 한국어 음성: ElevenLabs 목소리 설계로 만든 합성 음성.
-- 한글 패처에 들어 있는 xdelta 3.1.0(GPL-2.0)과 chdman 0.215(MAME, GPL-2.0 이상)의 라이선스는 압축 파일의 `라이선스.txt`·`GPL-2.0.txt` 를 보세요.
+- 한글 패처는 GPL-2.0 이상으로 공개합니다(소스: [patcher/](patcher/)). 함께 든 xdelta 3.1.0(GPL-2.0), chdman 0.215(MAME, GPL-2.0 이상), chdman.dll([RomForge](https://github.com/sinjunyoung/RomForge) v2.0.4, sinjunyoung, GPL-2.0)의 라이선스는 압축 파일의 `라이선스.txt`·`GPL-2.0.txt` 를 보세요.
 - 이 패치는 비영리 팬 번역입니다.
